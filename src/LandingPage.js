@@ -1,21 +1,27 @@
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from './hooks';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from './global';
-import { theme } from "./theme";
+
 import Projects from './Projects';
-import { Burger, Menu } from './components';
+import Toolbar from './components/Toolbar/Toolbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+import BackDrop from './components/BackDrop/BackDrop';
 
 function LandingPage()  {
         const [open, setOpen] = useState(false);
+        const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+        const [backGroundOpen, setBackGroundOpen] = useState(false);
         const [displayBio, toggleBio] = useState(false);
         const node = useRef();
         useOnClickOutside(node, () => setOpen(false));
         return (
-            <ThemeProvider theme ={theme}>
-                <>
-                    <GlobalStyle/>
-                    <div>
+
+            <div>
+                <div style={{height: '100%'}}>
+                    <Toolbar/>
+                    <SideDrawer/>
+                    <BackDrop/>
+                </div>
+                <main style={{marginTop: '64px'}} ref={node}>
                         <h2> My Name is Ravinder, Software Development Manager.</h2>
                         <p>I work as a software development lead and I love to code, learn new technologies!</p>
                         {
@@ -35,13 +41,8 @@ function LandingPage()  {
                         }
                         <hr/>
                         <Projects/>
-                    </div>
-                    <div ref={node}>
-                        <Burger open={open} setOpen={setOpen} />
-                        <Menu open={open} setOpen={setOpen} />
-                    </div>
-                </>
-            </ThemeProvider>
+                </main>
+            </div>
         )
 }
 

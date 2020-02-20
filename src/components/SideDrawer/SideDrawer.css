@@ -1,0 +1,33 @@
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0px 5px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    z-index: 200;
+}
+
+.side-drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.side-drawer li {
+    margin: 0.5rem 0;
+}
+.side-drawer a {
+    color: purple;
+    text-decoration: none;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: orange;
+}
