@@ -4,10 +4,18 @@
     box-shadow: 2px 0px 5px gray;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    float: right;
     width: 70%;
     max-width: 400px;
     z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+}
+
+.side-drawer.open {
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
 }
 
 .side-drawer ul {
@@ -30,4 +38,10 @@
 .side-drawer a:hover,
 .side-drawer a:active {
     color: orange;
+}
+
+@media(min-width: 769px) {
+    .side-drawer {
+        display: none;
+    }
 }

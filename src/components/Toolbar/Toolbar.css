@@ -50,4 +50,19 @@
 
 }
 
+@media (max-width: 768px) {
+    .toolbar__navigation-items {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle_toolbar-toggle-button {
+        display: none;
+    }
+    .toolbar__logo {
+        margin-left: 0;
+}
+
+}
 
