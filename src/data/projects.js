@@ -5,9 +5,9 @@ import project3 from '../assets/project3.png';
 const PROJECTS = [
     {
         id:1,
-        title: 'Example React Application',
-        description:'React App that I built',
-        link:'https://github.com',
+        title: 'React Application - This Site',
+        description:'React App that I built starting 13-Feb-2020',
+        link:'https://github.com/ravisujlana/portfolio',
         image: project1
     },
     {
@@ -16,13 +16,6 @@ const PROJECTS = [
         description:'AWS Setup for my website',
         link:'https://github.com',
         image: project2
-    },
-    {
-        id:3,
-        title: 'Pending Final project',
-        description:'Pending Final Project',
-        link:'https://github.com',
-        image: project3
     }
 ];
 

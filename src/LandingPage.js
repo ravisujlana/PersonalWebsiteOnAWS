@@ -8,7 +8,8 @@ import BackDrop from './components/BackDrop/BackDrop';
 class  LandingPage extends Component {
         state =  {
             sideDrawerOpen : false,
-            displayBio: false
+            displayBio: false,
+            displayBar: true
         };
         toggleBio = () => {
                 this.setState((prevState) => {
@@ -17,11 +18,19 @@ class  LandingPage extends Component {
                 )
         };
          drawerToggleButton = () => {
+             this.barToggleButton();
              this.setState((prevState) => {
-                     return {sideDrawerOpen: !prevState.sideDrawerOpen}
+                     return {displayBar: !prevState.displayBar}
                  }
              )
         };
+        barToggleButton = () => {
+        this.setState((prevState) => {
+                return {sideDrawerOpen: !prevState.sideDrawerOpen}
+            }
+        )
+    };
+
         backDropToggle = () => {
             this.setState({sideDrawerOpen: false});
         };
@@ -29,23 +38,24 @@ class  LandingPage extends Component {
             let backDrop;
 
             if(this.state.sideDrawerOpen) {
-                backDrop = <BackDrop clickBackdrop={this.backDropToggle}  />;
+                backDrop = <BackDrop clickBackdrop={this.backDropToggle}  show={this.state.displayBar}/>;
             }
             return (
                 <div>
                     <div style={{height: '100%'}}>
-                        <Toolbar drawerClickHandler={this.drawerToggleButton}/>
+                        <Toolbar drawerClickHandler={this.drawerToggleButton} show={this.state.displayBar}/>
                         <SideDrawer show={this.state.sideDrawerOpen} />
-                        {backDrop}
+                        {/*{backDrop}*/}
                     </div>
                     <main style={{marginTop: '64px'}} ref={'node'}>
-                        <h2> My Name is Ravinder, Software Development Manager.</h2>
-                        <p>I work as a software development lead and I love to code, learn new technologies!</p>
+
+                        <h2> My Name is Ravinder, software engineer, software development manager</h2>
+                        <p>I work as a software development manager and I love to code, learn new technologies!</p>
                         {
                             this.state.displayBio ? (
                                 <div>
-                                    <p>I write code everyday and I live in Washington DC Area.</p>
-                                    <p>My favorite language is JavaScript, besign coding I like to go to gym!</p>
+                                    <p>I review code daily, write code when I can and live in Washington DC Area.</p>
+                                    <p>My favorite language is Java; besides coding I like to spend time with my kids and go to gym!</p>
                                     <div>
                                         <button onClick={this.toggleBio}> Show Less</button>
                                     </div>

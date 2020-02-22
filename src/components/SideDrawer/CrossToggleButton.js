@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './DrawerToggleButton.css';
+import './CrossToggleButton.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from "@fortawesome/free-solid-svg-icons";
+import { faTimes} from "@fortawesome/free-solid-svg-icons";
 
 const drawerToggleButton = props => (
     <button className="toggle-button" onClick={props.click}>
         <div>
-            <FontAwesomeIcon icon={faBars} size="lg"/>
+            <FontAwesomeIcon icon={faTimes} size="lg"/>
         </div>
     </button>
 );

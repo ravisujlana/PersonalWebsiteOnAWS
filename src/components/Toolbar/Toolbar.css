@@ -1,14 +1,15 @@
 .toolbar__header {
     position: fixed;
-    background: purple;
+    background: #d9dfde;
     width: 100%;
-    height: 56px;
+    height: 64px;
+    float: right;
     top:0;
     left: 0;
 }
 
 .toolbar__logo {
-    margin-left: .5rem;
+    margin-left: 0;
 }
 .toolbar__logo a {
     color: black;;
