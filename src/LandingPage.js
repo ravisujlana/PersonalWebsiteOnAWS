@@ -4,6 +4,9 @@ import Projects from './Projects';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import BackDrop from './components/BackDrop/BackDrop';
+import Timeline from './components/Timeline/Timeline';
+
+import './common.css';
 
 class  LandingPage extends Component {
         state =  {
@@ -45,18 +48,29 @@ class  LandingPage extends Component {
                     <div style={{height: '100%'}}>
                         <Toolbar drawerClickHandler={this.drawerToggleButton} show={this.state.displayBar}/>
                         <SideDrawer show={this.state.sideDrawerOpen} />
-                        {/*{backDrop}*/}
                     </div>
                     <main style={{marginTop: '64px'}} ref={'node'}>
-
-                        <h2> My Name is Ravinder, software engineer, software development manager</h2>
-                        <p>I work as a software development manager and I love to code, learn new technologies!</p>
+                        <h2 className="heading content"> Software Engineer and Software development manager</h2>
+                        <div className ="content">
+                            <p>Dedicated Application Development Manager showcasing 19+ years of experience setting-up and
+                                managing mission-critical financial IT services and large-scale applications for industry leaders,
+                                including Citibank and Nucleus Software. Known for establishing IT infrastructure using the latest technology,
+                                vendor development/management, budgeting, IT procurement and assuring compliance with policies,
+                                processes, and tools. Design cutting edge technology solutions aligned with business requirements
+                                within a short turnaround of time. An assertive leader respected for leading and managing multiple project
+                                teams spread across different geographical locations, ensuring judicious resource allocation and utilization.
+                                Articulate communicator capable of explaining and negotiating solution strategy and product offerings with clients,
+                                key decision makers, and stakeholders to delivery strategic solutions. </p>
+                        </div>
+                        <div className="emptyLine"/>
                         {
                             this.state.displayBio ? (
-                                <div>
-                                    <p>I review code daily, write code when I can and live in Washington DC Area.</p>
-                                    <p>My favorite language is Java; besides coding I like to spend time with my kids and go to gym!</p>
-                                    <div>
+
+                                <div className="content">
+                                    <p/>
+                                    <p>I review code on daily basis, write code when I can and live in Washington DC Area.</p>
+                                    <p>My favorite language is Java; besides coding I like to spend time with my family and a fitness nerd!</p>
+                                    <div >
                                         <button onClick={this.toggleBio}> Show Less</button>
                                     </div>
                                 </div>
@@ -67,7 +81,7 @@ class  LandingPage extends Component {
                             )
                         }
                         <hr/>
-                        <Projects/>
+                        <Timeline/>
                     </main>
                 </div>
             )

@@ -20,8 +20,7 @@ const toolbar = props => {
                 <div className="spacer"/>
                 <div className="toolbar__navigation-items">
                     <ul>
-                        <li className="toolbar__navigation-item"><a href="/"><h3>About</h3></a></li>
-                        <li className="toolbar__navigation-item"><a href="/"><h3>React Application</h3></a></li>
+                        <li className="toolbar__navigation-item"><a href="https://github.com/ravisujlana/portfolio" target="_blank"><h3>This Website Code</h3></a></li>
                         <li className="toolbar__navigation-item"><a href="/"><h3>AWS - My Implementation</h3></a></li>
                     </ul>
                 </div>

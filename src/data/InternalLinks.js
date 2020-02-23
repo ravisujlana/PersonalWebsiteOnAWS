@@ -2,12 +2,6 @@
 
 const INTERNAL_LINKS = [
     {
-        id:1,
-        title: 'About',
-        description:'About',
-        link:'https://github.com/ravisujlana/portfolio'
-    },
-    {
         id:2,
         title: 'React Implementation',
         description:'React Implementation',
