@@ -5,7 +5,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import BackDrop from './components/BackDrop/BackDrop';
 import Timeline from './components/Timeline/Timeline';
-
+import Footer from './components/Footer/Footer';
 import './common.css';
 
 class  LandingPage extends Component {
@@ -83,6 +83,7 @@ class  LandingPage extends Component {
                         <hr/>
                         <Timeline/>
                     </main>
+                    <Footer/>
                 </div>
             )
         }
