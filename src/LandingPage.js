@@ -38,11 +38,6 @@ class  LandingPage extends Component {
             this.setState({sideDrawerOpen: false});
         };
         render () {
-            let backDrop;
-
-            if(this.state.sideDrawerOpen) {
-                backDrop = <BackDrop clickBackdrop={this.backDropToggle}  show={this.state.displayBar}/>;
-            }
             return (
                 <div>
                     <div style={{height: '100%'}}>
