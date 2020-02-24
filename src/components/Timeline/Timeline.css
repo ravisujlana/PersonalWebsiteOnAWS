@@ -5,7 +5,6 @@
 body {
     background-color: lightgrey; /* For browsers that do not support gradients */
     font-family: Helvetica, sans-serif;
-    bottom: 41px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -13,7 +12,6 @@ body {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    bottom: 41px;
 }
 
 /* The actual timeline (the vertical ruler) */

@@ -1,6 +1,6 @@
 .side-drawer {
     height: inherit;
-    background: lightcyan;/*#eee4e7;*/
+    background: lightgrey;/*#eee4e7;*/
     box-shadow: 2px 0px 5px gray;
     position: fixed;
     padding: 1px;
@@ -36,13 +36,13 @@
 }
 
 .side-drawer a {
-    color: gray;
+    color: white;
     text-decoration: none;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
-    color: gray;
+    color: black;
 }
 
 @media(min-width: 769px) {

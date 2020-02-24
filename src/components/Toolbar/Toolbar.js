@@ -8,9 +8,9 @@ import CrossToggleButton from '../SideDrawer/CrossToggleButton';
 const toolbar = props => {
     let showCorrectIcon ;
     if(!props.show) {
-        showCorrectIcon =  <CrossToggleButton click={props.drawerClickHandler}/>
+        showCorrectIcon =  <CrossToggleButton click={props.drawerClickHandler} size="5x"/>
     }else {
-        showCorrectIcon = <DrawerToggleButton click={props.drawerClickHandler}/>
+        showCorrectIcon = <DrawerToggleButton click={props.drawerClickHandler} size="5x"/>
     }
 
     return (
@@ -24,7 +24,7 @@ const toolbar = props => {
                         <li className="toolbar__navigation-item"><a href="/"><h3>AWS - My Implementation</h3></a></li>
                     </ul>
                 </div>
-                <div className="toggle_toolbar-toggle-button">
+                <div className="toggle_toolbar-toggle-button" >
                     { showCorrectIcon }
                 </div>
 

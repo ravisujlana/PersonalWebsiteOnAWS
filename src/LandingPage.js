@@ -1,9 +1,7 @@
 import React, { Component} from 'react';
 
-import Projects from './Projects';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
-import BackDrop from './components/BackDrop/BackDrop';
 import Timeline from './components/Timeline/Timeline';
 import Footer from './components/Footer/Footer';
 import './common.css';
@@ -13,12 +11,6 @@ class  LandingPage extends Component {
             sideDrawerOpen : false,
             displayBio: false,
             displayBar: true
-        };
-        toggleBio = () => {
-                this.setState((prevState) => {
-                        return {displayBio: !prevState.displayBio}
-                    }
-                )
         };
          drawerToggleButton = () => {
              this.barToggleButton();
@@ -33,10 +25,6 @@ class  LandingPage extends Component {
             }
         )
     };
-
-        backDropToggle = () => {
-            this.setState({sideDrawerOpen: false});
-        };
         render () {
             return (
                 <div>
@@ -45,7 +33,7 @@ class  LandingPage extends Component {
                         <SideDrawer show={this.state.sideDrawerOpen} />
                     </div>
                     <main style={{marginTop: '64px'}} ref={'node'}>
-                        <h2 className="heading content"> Software Engineer and Software development manager</h2>
+                        <h2 className="heading content"> Software Engineer and Software Development Manager</h2>
                         <div className ="content">
                             <p>Dedicated Application Development Manager showcasing 19+ years of experience setting-up and
                                 managing mission-critical financial IT services and large-scale applications for industry leaders,
@@ -58,27 +46,13 @@ class  LandingPage extends Component {
                                 key decision makers, and stakeholders to delivery strategic solutions. </p>
                         </div>
                         <div className="emptyLine"/>
-                        {
-                            this.state.displayBio ? (
-
-                                <div className="content">
-                                    <p/>
-                                    <p>I review code on daily basis, write code when I can and live in Washington DC Area.</p>
-                                    <p>My favorite language is Java; besides coding I like to spend time with my family and a fitness nerd!</p>
-                                    <div >
-                                        <button onClick={this.toggleBio}> Show Less</button>
-                                    </div>
-                                </div>
-                            ) : (
-                                <div>
-                                    <button onClick={this.toggleBio}> Read More</button>
-                                </div>
-                            )
-                        }
                         <hr/>
                         <Timeline/>
                     </main>
-                    <Footer/>
+                    <div className="emptyLine"/>
+                    <div style={{height: '100%'}}>
+                        <Footer/>
+                    </div>
                 </div>
             )
         }
