@@ -1,6 +1,4 @@
 const path =require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, "src","index.js"),
     output: {
@@ -14,22 +12,27 @@ module.exports = {
                 exclude: /node_modules/,
                 loaders:  ["react-hot-loader/webpack", "babel-loader"],
             },
-            {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
+
             {
                 test: /\.(png|jpe?g|gif|ico)$/i,
                 use: [
                     {
                         loader: 'file-loader',
+                        options: {
+                            name: "[name].[hash].[ext]",
+                            outputPath: "imgs"
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.html$/i,
+                use: [
+                    {
+                        loader: 'html-loader',
                     },
                 ],
             }
         ]
-    },
-
-    plugins: [
-        new HtmlWebpackPlugin({template: './public/index.html'})
-    ]
+    }
 };
