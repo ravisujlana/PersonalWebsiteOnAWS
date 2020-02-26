@@ -1,10 +1,11 @@
 import React, { Component} from 'react';
 
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Timeline from './components/Timeline/Timeline';
-import Footer from './components/Footer/Footer';
-import './common.css';
+import Toolbar from '../Toolbar/Toolbar';
+import SideDrawer from '../SideDrawer/SideDrawer';
+import Timeline from '../Timeline/Timeline';
+import Footer from '../Footer/Footer';
+import '../../common.css';
+
 
 class  LandingPage extends Component {
         state =  {
@@ -51,7 +52,7 @@ class  LandingPage extends Component {
                     </main>
                     <div className="emptyLine"/>
                     <div style={{height: '100%'}}>
-                        <Footer/>
+                            <Footer/>
                     </div>
                 </div>
             )

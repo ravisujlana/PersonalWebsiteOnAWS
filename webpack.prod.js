@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const  MiniCssExtractPlugin  = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = merge(common, {
@@ -32,10 +33,12 @@ module.exports = merge(common, {
                    ]
             },
       plugins: [new CleanWebpackPlugin( {
-            verbose: true
-      }), new MiniCssExtractPlugin({
-            filename: "[name].[hash].css"
-      }),],
+                verbose: true
+          }), new MiniCssExtractPlugin({
+                filename: "[name].[hash].css"
+          }),
+            new ManifestPlugin()
+      ],
       module: {
             rules: [
                   {

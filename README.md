@@ -69,4 +69,3 @@ Backlog:
 5. Dynamically display blogs using Serverless features
 6. Move current Landing page to About section
 7. Change landing page to display introduction section, blogs
-
