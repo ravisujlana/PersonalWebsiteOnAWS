@@ -1,0 +1,1 @@
+aws dynamodb create-table --attribute-definitions AttributeName=BlogId,AttributeType=N AttributeName=Year,AttributeType=N --table-name Blogs --key-schema AttributeName=BlogId,KeyType=HASH AttributeName=Year,KeyType=SORT --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 --region us-east-1 --output json --endpoint-url http://localhost:8000

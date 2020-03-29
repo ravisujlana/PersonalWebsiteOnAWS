@@ -1,5 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+import 'react-dates/initialize';
+
+import 'react-dates/lib/css/_datepicker.css';
+
+import LandingPage from "./components/LandingPage/LandingPage";
+import {BrowserRouter} from "react-router-dom";
+import 'bootstrap';
+import '../scss/custom.scss';
+
+
+ReactDOM.render(<BrowserRouter>
+                   <LandingPage/>
+                 </BrowserRouter>,
+    document.getElementById('root'));

@@ -8,7 +8,7 @@ import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 const footer = props => {
 
     return (
-        <div>
+        <div className="container-fluid">
             <header className="footer_header">
                 <nav className="footer_navigation">
                     <small>&copy; Copyright 2020, Ravinder Pal Singh</small>
@@ -20,11 +20,9 @@ const footer = props => {
                             </li>
                             <li>
                                 <a href="https://www.github.com/ravisujlana/portfolio" target="_blank" rel="noopener noreferrer" > <FontAwesomeIcon icon={faGithub} size="2x" /></a>
-
                             </li>
                         </ul>
                     </div>
-
                 </nav>
             </header>
         </div>

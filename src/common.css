@@ -7,11 +7,10 @@
 }
 
 .content {
-    padding: 20px 30px;
-    top: 5px;
+    padding: 5px 20px;
     background-color: white;
     position: relative;
-    border-radius: 6px;
+    border-radius: 1px;
 }
 
 .emptyLine {

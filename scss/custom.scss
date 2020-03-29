@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+.bg-custom {
+  background-color: #35BCFF;
+  background-image: linear-gradient(to right, #35BCFF, gray); /* Standard syntax (must be last) */
+}
+
+$enable-gradients: true;
+
+@import "~bootstrap/scss/bootstrap";
