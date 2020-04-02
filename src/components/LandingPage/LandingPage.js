@@ -4,8 +4,8 @@ import Menu from '../Menu/Menu';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
 import About from '../About/About';
-import BlogCreator from "../Blogs/BlogCreator/BlogCreator";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import CreateBlog from "../Blogs/CreateBlog";
 
 import '../../common.css';
 
@@ -20,7 +20,7 @@ class  LandingPage extends Component {
                         </div>
                         <Switch>
                             <Route path="/" exact={true} component={Home}/>
-                            <Route path="/createBlog" component={BlogCreator}/>
+                            <Route path="/createBlog" component={CreateBlog}/>
                             <Route path="/about" component={About}/>
                             <Route path="/git" component={About}/>
                         </Switch>

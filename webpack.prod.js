@@ -1,11 +1,16 @@
 const path =require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
+const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const  MiniCssExtractPlugin  = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const express = require('express');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = merge(common, {
@@ -15,10 +20,19 @@ module.exports = merge(common, {
                 path: path.resolve(__dirname, "build"),
                 filename: "bundle.[hash].js"
           },
+
           optimization: {
                    minimizer: [
                        new OptimizeCssAssetsPlugin(),
+                       new webpack.optimize.AggressiveMergingPlugin(),
+                       // new BundleAnalyzerPlugin(), /* Analyze Bundle size*/
                         new TerserWebpackPlugin(),
+                       new CompressionPlugin({
+                           algorithm: 'brotliCompress',
+                           test: /\.(js|css|html|svg)$/,
+                           threshold: 10240,
+                           minRatio: 0.8,
+                       }),
                          new HtmlWebpackPlugin({
                                template: './public/index.html',
                                minify: {

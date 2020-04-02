@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Timeline2 from "../Timeline2/Timeline2";
+import Timeline from "../Timeline/Timeline";
 
 const About = props => {
     return (
@@ -20,7 +20,7 @@ const About = props => {
                 </div>
                 <hr/>
             </main>
-            <Timeline2/>
+            <Timeline/>
         </div>
     )
 }

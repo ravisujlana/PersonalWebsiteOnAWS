@@ -6,7 +6,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
 import LandingPage from "./components/LandingPage/LandingPage";
-import {BrowserRouter} from "react-router-dom";
+import BrowserRouter from "react-router-dom/BrowserRouter";
 import 'bootstrap';
 import '../scss/custom.scss';
 
