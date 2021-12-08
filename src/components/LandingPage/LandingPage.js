@@ -5,7 +5,6 @@ import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
 import About from '../About/About';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Ravinder from '../Menu/Ravinder';
 import CreateBlog from "../Blogs/CreateBlog";
 
 import '../../common.css';

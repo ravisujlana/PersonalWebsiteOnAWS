@@ -8,7 +8,7 @@ In the project directory, you can run:
 ### `npm run start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
@@ -64,8 +64,9 @@ Cloudfront: used for Static content Delivery across the globe
 Backlog:
 1. Automate AWS Deployment using AWS CLI
 2. Add Blogs Section
-3. Fix the hamburger menu
+3. Fix the hamburger menu - Done
 4. Add Contact section
 5. Dynamically display blogs using Serverless features
-6. Move current Landing page to About section
+6. Move current Landing page to About section - Done
 7. Change landing page to display introduction section, blogs
+8. Add some blogs

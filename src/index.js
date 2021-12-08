@@ -11,10 +11,8 @@ import 'bootstrap';
 import '../scss/custom.scss';
 import Menu from "./components/Menu/Menu";
 import Home from "./components/Home/Home";
-import CreateBlog from "./components/Blogs/CreateBlog";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
-import Ravinder from "./components/Menu/Ravinder";
 
 ReactDOM.render(
 
