@@ -4,7 +4,8 @@ import Menu from '../Menu/Menu';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
 import About from '../About/About';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Ravinder from '../Menu/Ravinder';
 import CreateBlog from "../Blogs/CreateBlog";
 
 import '../../common.css';
@@ -13,22 +14,22 @@ import '../../common.css';
 class  LandingPage extends Component {
         render () {
             return (
-                <Router>
-                    <div >
-                        <div style={{height: '100%'}}>
-                            <Menu/>
+                    <Router>
+                        <div>
+                            <div>
+                                <Menu/>
+                            </div>
+                            <Routes>
+                                <Route path="/" exact={true} element={Home}/>
+                                <Route path="/createBlog" element={CreateBlog}/>
+                                <Route path="/about" element={About}/>
+                                <Route path="/git" element={About}/>
+                            </Routes>
+                            <div className="emptyLine"/>
+                            <div>
+                                    <Footer/>
+                            </div>
                         </div>
-                        <Switch>
-                            <Route path="/" exact={true} component={Home}/>
-                            <Route path="/createBlog" component={CreateBlog}/>
-                            <Route path="/about" component={About}/>
-                            <Route path="/git" component={About}/>
-                        </Switch>
-                        <div className="emptyLine"/>
-                        <div style={{height: '100%'}}>
-                                <Footer/>
-                        </div>
-                    </div>
                 </Router>
             )
         }

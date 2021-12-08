@@ -2,9 +2,62 @@
 @import "~bootstrap/scss/variables";
 
 .bg-custom {
-  background-color: #35BCFF;
-  background-image: linear-gradient(to right, #35BCFF, gray); /* Standard syntax (must be last) */
+  //background-color: #35BCFF;
+  //background-image: linear-gradient(to right, #35BCFF, gray); /* Standard syntax (must be last) */
 }
+
+.align-center-DB {
+  align-content: center;
+  columns: fill-available;
+  height: 100%;
+}
+
+.header.header1 {
+  background: #f7f7f7;
+  columns: fill-available;
+  align-content: center;
+}
+.header {
+  position: relative;
+  columns: fill-available;
+  align-content: center;
+  background: #f7f7f7;
+  width: 100%;
+  font-size: 24px;
+  z-index: 8000;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.menu {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  align-content: center;
+  top:0;
+  color: #f7f7f7;
+  width: 100%;
+  font-size: 24px;
+  z-index: 8000;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.footer {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  bottom:0;
+  color: #f7f7f7;
+  z-index: 8000;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
 
 $enable-gradients: true;
 

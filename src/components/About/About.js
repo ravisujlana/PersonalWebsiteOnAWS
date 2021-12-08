@@ -6,17 +6,22 @@ const About = props => {
     return (
         <div>
             <main >
-                <h2 className="heading content"> Software Engineer and Software Development Manager</h2>
+                <h5 className="heading content"> Software Development | System Design | Global Virtual Team Leader</h5>
                 <div className ="content">
-                    <p>Dedicated Application Development Manager showcasing 19+ years of experience setting-up and
-                        managing mission-critical financial IT services and large-scale applications for industry leaders,
-                        including Citibank and Nucleus Software. Known for establishing IT infrastructure using the latest technology,
-                        vendor development/management, budgeting, IT procurement and assuring compliance with policies,
-                        processes, and tools. Design cutting edge technology solutions aligned with business requirements
-                        within a short turnaround of time. An assertive leader respected for leading and managing multiple project
-                        teams spread across different geographical locations, ensuring judicious resource allocation and utilization.
-                        Articulate communicator capable of explaining and negotiating solution strategy and product offerings with clients,
-                        key decision makers, and stakeholders to delivery strategic solutions. </p>
+                    <p>
+                        Dedicated Technical Leader showcasing 20 years of experience setting-up and managing mission-critical financial IT services and large scale applications for industry leaders, including Citibank and Nucleus Software. An assertive leader respected for leading and managing multiple project teams spread across different geographical locations, ensuring judicious resource allocation and utilization.
+                    </p>
+                    <p>
+                        <b>Area of Expertise:</b>
+                    </p>
+                    <p>
+                        Software Development | Software Engineering | Technical Program Management | Technical Project Management | Agile | Distributed Application Design | Software Development Life Cycle | Back-end Development | Workflow Systems Development | Business Process Management | Vendor Management | Full-Stack Software Engineering
+                    </p>
+                    <p>
+                        <b>Leadership:</b>
+                    </p>
+                    <p>Lead Global Engineering Teams | Lead Virtual Teams
+                    </p>
                 </div>
                 <hr/>
             </main>

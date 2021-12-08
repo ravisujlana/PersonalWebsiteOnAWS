@@ -1,24 +1,24 @@
 const path =require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const  MiniCssExtractPlugin  = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const express = require('express');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 module.exports = merge(common, {
           entry: path.resolve(__dirname, "src", "index.js"),
           mode: "production",
           output: {
                 path: path.resolve(__dirname, "build"),
-                filename: "bundle.[hash].js"
+                filename: "bundle.[contenthash].js"
           },
 
           optimization: {
@@ -49,9 +49,9 @@ module.exports = merge(common, {
       plugins: [new CleanWebpackPlugin( {
                 verbose: true
           }), new MiniCssExtractPlugin({
-                filename: "[name].[hash].css"
-          }),
-            new ManifestPlugin()
+                filename: "[name].[contenthash].css"
+          })
+          //,new WebpackManifestPlugin()
       ],
       module: {
             rules: [
@@ -70,11 +70,13 @@ module.exports = merge(common, {
                     }, {
                         loader: 'postcss-loader', // Run post css actions
                         options: {
-                            plugins: function () { // post css plugins, can be exported to postcss.config.js
-                                return [
-                                    require('precss'),
-                                    require('autoprefixer')
-                                ];
+                            postcssOptions: {
+                                plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                    return [
+                                        require('precss'),
+                                        require('autoprefixer')
+                                    ];
+                                }
                             }
                         }
                     }, {

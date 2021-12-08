@@ -5,7 +5,7 @@ module.exports = {
     entry: path.resolve(__dirname, "src","index.js"),
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "bundle.[hash].js"
+        filename: "bundle.[contenthash].js"
     },
     mode: "development",
     module: {
@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.jsx?/,
                 exclude: /node_modules/,
-                loaders:  ["react-hot-loader/webpack", "babel-loader"],
+                use:  [ "react-hot-loader/webpack", "babel-loader"],
             },
             {
                 test: /\.css$/i,

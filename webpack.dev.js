@@ -1,8 +1,8 @@
 const path =require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = merge( common,{
   entry: path.resolve(__dirname, "src","index.js"),
@@ -11,7 +11,8 @@ module.exports = merge( common,{
     new HtmlWebpackPlugin({
           template: './public/index.html',
           favicon: './public/ravinder.ico'
-    }), new ManifestPlugin({fileName: 'manifest.json', publicPath: true})
+    })
+    , new WebpackManifestPlugin({fileName: 'manifest.json', publicPath: true})
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -32,11 +33,13 @@ module.exports = merge( common,{
         }, {
           loader: 'postcss-loader', // Run post css actions
           options: {
-            plugins: function () { // post css plugins, can be exported to postcss.config.js
-              return [
-                require('precss'),
-                require('autoprefixer')
-              ];
+            postcssOptions: {
+              plugins: function () { // post css plugins, can be exported to postcss.config.js
+                return [
+                  require('precss'),
+                  require('autoprefixer')
+                ];
+              }
             }
           }
         }, {

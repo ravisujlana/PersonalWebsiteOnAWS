@@ -4,14 +4,14 @@ module.exports = {
     entry: path.resolve(__dirname, "src","index.js"),
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "bundle.[hash].js"
+        filename: "bundle.[contenthash].js"
     },
     module: {
         rules: [
             {
                 test: /\.jsx?/,
                 exclude: /node_modules/,
-                loaders:  ["react-hot-loader/webpack", "babel-loader"],
+                use:  ["react-hot-loader/webpack", "babel-loader"],
             },
 
             {
@@ -20,7 +20,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: "[name].[hash].[ext]",
+                            name: "[name].[contenthash].[ext]",
                             outputPath: "imgs"
                         }
                     },
