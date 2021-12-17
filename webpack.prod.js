@@ -14,7 +14,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const OptimizeCssAssetsPlugin = require("css-minimizer-webpack-plugin");
 module.exports = merge(common, {
-          entry: path.resolve(__dirname, "src", "index.js"),
+          entry: path.resolve(__dirname, "src", "lambda_articles.js.js"),
           mode: "production",
           output: {
                 path: path.resolve(__dirname, "build"),

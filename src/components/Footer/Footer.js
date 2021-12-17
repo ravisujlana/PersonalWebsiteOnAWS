@@ -11,7 +11,7 @@ const footer = props => {
         <div className="container-fluid">
             <header className="footer_header">
                 <nav className="footer_navigation">
-                    <small>&copy; Copyright 2021, Ravinder Pal Singh</small>
+                    <small>&copy; Copyright {new Date().getFullYear()}, Ravinder Pal Singh</small>
                     <div className="spacer"/>
                     <div className="footer_navigation-items">
                         <ul>

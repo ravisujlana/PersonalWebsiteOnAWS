@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import 'react-dates/initialize';
 
 import 'react-dates/lib/css/_datepicker.css';
+import Main from './components/Blogs/Main';
 
-import LandingPage from "./components/LandingPage/LandingPage";
-import {BrowserRouter as Router, BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import 'bootstrap';
 import '../scss/custom.scss';
 import Menu from "./components/Menu/Menu";
@@ -23,7 +23,7 @@ ReactDOM.render(
                 </div>
          <div >
          <Routes>
-            <Route path="/" exact={true} element={<Home/>}/>
+            <Route path="/" exact={true} element={<Main/>}/>
             {/*<Route path="/createBlog" element={<CreateBlog/>}/>*/}
             <Route path="/about" element={<About/>}/>
             <Route path="/git" element={<About/>}/>

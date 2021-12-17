@@ -1,7 +1,7 @@
 const path =require("path");
 
 module.exports = {
-    entry: path.resolve(__dirname, "src","index.js"),
+    entry: path.resolve(__dirname, "src","lambda_articles.js.js"),
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "bundle.[contenthash].js"

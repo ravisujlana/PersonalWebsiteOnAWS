@@ -20,13 +20,16 @@ const Menu = props => {
 
     return (
         <div className="menu">
-            <nav className="navbar navbar-expand-md navbar-light position-sticky">
-                <a className="navbar-brand px-3"  href="#">Ravi</a>
+            <nav className="navbar navbar-expand-sm navbar-light position-sticky">
+                <a className="navbar-brand px-3"  href="/">Ravinder</a>
                 <button className="navbar-toggler" type="button"
                         data-toggle="collapse"
                         data-bs-toggle="collapse"
                         data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="buttonMenuToggle">
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        id="buttonMenuToggle">
                     <span className="navbar-toggler-icon"> </span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -41,11 +44,11 @@ const Menu = props => {
                                     About
                                 </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to='/createBlog' className="dropdown-item" >
-                                    Create Blog
-                                </Link>
-                        </li>
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to='/createBlog' className="dropdown-item" >*/}
+                        {/*            Create Blog*/}
+                        {/*        </Link>*/}
+                        {/*</li>*/}
                     </ul>
                 </div>
             </nav>

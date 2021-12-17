@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = merge( common,{
-  entry: path.resolve(__dirname, "src","index.js"),
+  entry: path.resolve(__dirname, "src","lambda_articles.js.js"),
   mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
