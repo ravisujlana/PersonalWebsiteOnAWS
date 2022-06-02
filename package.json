@@ -83,7 +83,7 @@
     "mini-css-extract-plugin": "^2.4.5",
     "moment": "^2.29.1",
     "node-sass": "^6.0.1",
-    "npm": "^8.1.4",
+    "npm": "^8.11.0",
     "popper.js": "^1.16.1",
     "postcss-loader": "^4.0.3",
     "precss": "^4.0.0",
